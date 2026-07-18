@@ -8,9 +8,16 @@ export function AuthProvider({ children }) {
   const [user, setUser] = useState(null)
   const [savedJobIds, setSavedJobIds] = useState([])
 
+
+  await axios.post("http://localhost:5000/api/auth/login", userData);
+
+  await axios.post("http://localhost:5000/api/auth/register", userData);
+
+  const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+
   const login = async (userData) => {
   const response = await axios.post(
-    "http://localhost:5000/api/auth/login",
+    `${API_URL}/api/auth/login`,
     userData
   );
 
@@ -20,7 +27,7 @@ export function AuthProvider({ children }) {
 
   const register = async (userData) => {
   const response = await axios.post(
-    "http://localhost:5000/api/auth/register",
+    `${API_URL}/api/auth/register`,
     userData
   );
 
