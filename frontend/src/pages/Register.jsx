@@ -58,7 +58,7 @@ export default function Register() {
               <label className="mb-1.5 block text-sm font-medium">Full Name</label>
               <div className="relative">
                 
-                <input required value={name} onChange={(e) => setName(e.target.value)} className="input-field pl-9" placeholder="Chandu Reddy" />
+                <input required value={name} onChange={(e) => setName(e.target.value)} className="input-field pl-9" placeholder="your name" />
               </div>
             </div>
             <div>

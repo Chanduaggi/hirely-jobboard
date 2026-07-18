@@ -5,7 +5,7 @@ import { useAuth } from '../context/AuthContext'
 import { toast } from 'react-toastify';
 
 export default function Login() {
-  const [email, setEmail] = useState('chandu@example.com')
+  const [email, setEmail] = useState('yourname@example.com')
   const [password, setPassword] = useState('')
   const [showPw, setShowPw] = useState(false)
   const { login } = useAuth()
